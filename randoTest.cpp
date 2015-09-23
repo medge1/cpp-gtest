@@ -71,16 +71,28 @@ TEST(RandoTest, noChildrenSmile)
 	ASSERT_FALSE( rando.shouldWorry(false,false,false) );
 }
  
-TEST(RandoTest, isDivisable)
+TEST(RandoTest, firstIsDivisable)
 {
 	Rando rando;
 	ASSERT_TRUE( rando.isDivisibleBy(8,2) );
 }
 
-TEST(RandoTest, isNotDivisable)
+TEST(RandoTest, secondIsDivisable)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisibleBy(2,8) );
+}
+
+TEST(RandoTest, firstIsNotDivisable)
 {
 	Rando rando;
 	ASSERT_FALSE( rando.isDivisibleBy(5,2) );
+}
+
+TEST(RandoTest, secondIsNotDivisable)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isDivisibleBy(2,5) );
 }
 
 TEST(RandoTest, isPrime)
