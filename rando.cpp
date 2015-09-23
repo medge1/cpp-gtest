@@ -23,13 +23,9 @@ bool Rando::isDivisibleBy(int first, int second)
         {
           return false;
         }
-	else if(first%second == 0)
+	else if(first%second == 0 || second%first == 0)
         {
            return true; 
-        }
-        else if(second%first == 0)
-        {
-	  return true;
         }
         else
         {
