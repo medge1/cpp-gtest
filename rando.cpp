@@ -1,5 +1,5 @@
 #include "rando.h"
-//#include <stdlib.h>
+#include <stdlib.h>
 
 
 /**
@@ -19,7 +19,14 @@ bool Rando::shouldWorry(bool childASmile, bool childBSmile, bool childCSmile)
 **/
 bool Rando::isDivisibleBy(int first, int second)
 {
-	return false;
+	if(first%second == 0)
+        {
+           return true; 
+        }
+        else
+        {
+	  return false;
+        }
 }
 
 /**
@@ -29,7 +36,14 @@ bool Rando::isDivisibleBy(int first, int second)
 **/
 bool Rando::isPrime(int num)
 {
-	return true;
+        if( num%2 == 0)
+        {
+          return false;
+        }
+        else
+        {
+	  return true;
+        }
 }
 
 /**
@@ -38,5 +52,12 @@ bool Rando::isPrime(int num)
 **/
 int Rando::nearestToZero(int a, int b)
 {
-	return 0;
+        if( abs(a) > abs(b) )
+        {
+          return b;
+        }
+        else
+        {
+          return a;
+        }
 }
